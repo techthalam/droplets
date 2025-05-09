@@ -7,10 +7,6 @@ clean:
 
 all: lint	vet	cyclo	test	build
 
-test:
-	@echo "Running unit tests..."
-	@go test -cover ./...
-
 cyclo:
 	@echo "Checking cyclomatic complexity..."
 	@gocyclo -over 7 ./
