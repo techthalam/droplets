@@ -6,7 +6,6 @@ RUN CGO_ENABLED=0 make setup all
 
 FROM alpine:latest
 RUN mkdir /app
-WORKDIR /app
 COPY --from=builder /droplets-src/bin/droplets ./
 COPY --from=builder /droplets-src/web ./web
 EXPOSE 8080
